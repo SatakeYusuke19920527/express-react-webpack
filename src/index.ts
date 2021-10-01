@@ -1,5 +1,6 @@
 import express from 'express';
-import router from './routes/v1/index';
+import v1Router from './routes/v1/index';
+import v2Router from './routes/v2/index';
 
 const app = express();
 
@@ -9,9 +10,10 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
 // ルーティング
-app.use('/v1', router);
+app.use('/v1', v1Router);
+app.use('/v2', v2Router);
 
-// 3000ポートで受信
+// 3001ポートで受信
 const port = process.env.PORT || 3000;
 
 // APIサーバ起動
