@@ -7,7 +7,7 @@
     "client": "npx webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:3001/",
   "keywords": [],
   "author": "",
   "license": "ISC",
